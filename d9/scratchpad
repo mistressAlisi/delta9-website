@@ -1,0 +1,19 @@
+
+ $('html, body').animate({
+        scrollTop: $("#YOUR-TARGET").offset().top
+     }, 300);
+
+
+
+$("#mainBg").removeClass('visible');
+$("#mainBg")[0].style.animation = 'none';
+$("#mainBg")[0].style.webkitanimation = 'none';
+$("#mainBg").removeClass('d9BG-BGRF').delay('fast');
+$("#mainBg").addClass('d9BG-B').delay('fast');
+setTimeout(function(){
+  $("#mainBg")[0].style.animation = '';
+	$("#mainBg")[0].style.webkitanimation = '';
+  $("#mainBg").addClass('visible');
+},50);
+
+

@@ -1,0 +1,49 @@
+<!doctype html>
+{% load bootstrap4 %}
+
+<html lang="en">
+<head>
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Viridian Scientific">
+<title>{%block Title%}Bootstrap · Base{%endblock%}</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Play&family=Titillium+Web&display=swap');
+</style> 
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<script type="text/javascript" src="/static/js/presentation.js"></script>
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+<link href="/static/css/cover.css" rel="stylesheet">
+</head>
+<!--   <body class="text-center"> -->
+<body class="text-center"  data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div id="mainBg" class="mainBg visible d9BG-BGRF"></div>
+  {%include "bootstrap-navbar.html" %}
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" >
+
+
+ 
+ {%block content%}{%endblock%}
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>delta9 by Viridian Scientific - contact us!</p>
+    </div>
+  </footer>
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+</div>
+</body>
+</html>
+

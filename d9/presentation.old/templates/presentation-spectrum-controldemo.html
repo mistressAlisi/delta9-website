@@ -1,0 +1,45 @@
+{%extends "card-template.html" %}
+{%block card-id %}spectrum-control{% endblock %}
+{%block card-title %} Total Spectrum Control. {% endblock %}
+{%block inside-card %} 
+    <p class="lead">Using the buttons below, you can toggle each of Delta9's specific frequencies. In a growing scenario, each frequency can be specifically tuned from 0 to 100% with increments of 1%.
+    </p>
+    <h3>Try it out!</h3>
+    <div class="container">
+    <div class="row">
+    <div class="col">
+    <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input dynbkgtgld9" id="DeepBlueTGL" checked="checked">
+    <label class="custom-control-label" for="DeepBlueTGL">Deep Blue (445-455nm)</label>
+    </input>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input dynbkgtgld9" id="DeepRedTGL" checked="checked">
+    <label class="custom-control-label" for="DeepRedTGL">Deep Red (655-670nm)</label>
+    </input>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input dynbkgtgld9" id="GreenTGL" checked="checked">
+    <label class="custom-control-label" for="GreenTGL">Green (550-570nm) </label>
+    </input>
+    </div>
+    </div>
+    
+    <div class="col">
+    <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input dynbkgtgld9"  id="FarRedTGL" checked="checked">
+    <label class="custom-control-label" for="FarRedTGL">Far Red (720-750nm)</label>
+    </input>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br/>
+    <a href="#" class="btn btn-lg btn-success" onclick="$('html, body').animate({scrollTop: $('#better').offset().top }, 1000);">Learn More</a>   
+{% endblock %}

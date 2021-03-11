@@ -1,0 +1,24 @@
+
+  <header class="masthead mb-auto">
+    <div class="header-inner inner">
+      <h3 class="masthead-brand">Viridian Delta9</h3>
+      <nav class="navbar navbar-expand navbar-dark nav nav-masthead justify-content-center">
+      <ul class="mr-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#better">Grow Better</a></li>
+        <li class="nav-item"><a class="nav-link" href="#spectrum">Full Spectrum</a></li>
+        <li class="nav-item"><a class="nav-link" href="#control">Total Control</a></li>
+        <li class="nav-item"><a class="nav-link" href="#specs">Specs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#order">Order Now!</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<script type="text/javascript">
+$(".navbar a[href^='#']").on('click',function(event){
+target = this.hash;
+event.preventDefault();
+$('html, body').animate({scrollTop: $(target).offset().top }, 1000);
+document.location.href = target;
+});
+</script>

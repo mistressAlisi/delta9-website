@@ -1,0 +1,31 @@
+{%extends "bootstrap-base.html" %}
+
+{%block Title%}Delta9{%endblock%}
+{%block content %}
+<!-- <div class="wrapper"> -->
+<script type="text/javascript" src="/static/js/presentation.js"></script>
+<div class="cd-section" id="headers">
+</div>
+{%include "presentation-home.html" %}
+<div class="cd-section" id="features">
+{%include "presentation-grow.html" %}
+{%include "presentation-spectrum.html" %}
+{%include "presentation-spectrum-controldemo.html" %}
+{%include "presentation-power.html" %}
+{%include "presentation-thermals.html" %}
+{%include "presentation-specs.html" %}
+</div>
+<!-- </div> -->
+{%endblock%}
+{%block content_old%}
+
+<!--  <main role="main" class="inner cover"  data-spy="scroll" data-target=".navbar" data-offset="50"> -->
+   {%include "presentation-home.html" %}
+   {%include "presentation-grow.html" %}
+   {%include "presentation-spectrum.html" %}
+   {%include "presentation-spectrum-controldemo.html" %}
+   {%include "presentation-control.html" %}
+<!--   </main> -->
+
+
+{%endblock%}
