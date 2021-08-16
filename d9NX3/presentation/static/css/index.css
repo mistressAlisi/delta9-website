@@ -1,0 +1,10 @@
+.d9nx-container {
+    position: relative;
+    left: -80px;
+}
+.plants-carousel {
+    height: 700px;
+}
+.d9-gradient {
+  background:  linear-gradient(-135deg, rgba(70,9,121,1) 0%, rgba(2,0,36,1) 18%, rgba(50,0,64,1) 75%, rgba(70,9,121,1) 100%);
+}
