@@ -21,4 +21,5 @@ urlpatterns = [
     path('2d/',views.home_2d,name='home'),
     path('benefits/',views.benefits,name='benefits'),
     path('spectrum/',views.spectrum,name='spectrum'),
+    path('home_mobile/',views.home_mobile,name='home'),
 ]
