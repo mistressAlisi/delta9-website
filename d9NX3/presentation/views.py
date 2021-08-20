@@ -18,4 +18,6 @@ def spectrum(request):
 
 
 def home_mobile(request):
-    return render(request,"presentation-index-mobi.html",{})
+    return render(request,"presentation-index-mobi.html",{})\
+
+
