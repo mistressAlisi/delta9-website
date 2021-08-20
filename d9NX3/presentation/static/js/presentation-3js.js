@@ -55,7 +55,9 @@
 						const loader = new GLTFLoader().setPath( '/static/models/' );
 						loader.setDRACOLoader(dracoLoader);
 						loader.load( 'd9NX3.glb', function ( gltf ) {
-                            window.gltfd= gltf;
+//                             window.gltfd= gltf;
+                            $("#3d_placehldr")[0].style.display = 'none';
+                            $("#3d_help")[0].innerHTML = "(Click and drag to move, right click and drag to rotate!)";
 							gltf.scene.traverse( function ( child ) {
 
 								if ( child.isMesh ) {
@@ -87,8 +89,10 @@
                             
                             },
 							function ( xhr ) {
-
-                           console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+                            var loadPct = Math.round(( xhr.loaded / xhr.total * 100 ));
+                            console.log("Loading NX3 Model: "+loadPct+"...");
+                            $("#load_pct")[0].innerHTML = loadPct;
+                            
         
                             }
 							);
