@@ -57,7 +57,7 @@
 						loader.load( 'd9NX3.glb', function ( gltf ) {
 //                             window.gltfd= gltf;
                             $("#3d_placehldr")[0].style.display = 'none';
-                            $("#3d_help")[0].innerHTML = "(Click and drag to move, right click and drag to rotate!)";
+                            $("#3d_help")[0].innerHTML = "(Click and drag to rotate, right click and drag to move!)";
 							gltf.scene.traverse( function ( child ) {
 
 								if ( child.isMesh ) {
