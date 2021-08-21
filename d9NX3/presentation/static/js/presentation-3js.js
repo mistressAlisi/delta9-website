@@ -29,6 +29,7 @@
 // 				document.body.appendChild( container );  
 //                 console.log(window.innerWidth/window.innerHeight,window.innerWidth,window.innerHeight);
                 var aspect = $("#3dcanvas").width()/$("#3dcanvas").height();
+
 //                 console.warn(aspect,$("#3dcanvas").width(),$("#3dcanvas").height());
 				camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 0.25, 20 );
 				camera.position.set(-0.5,2,1.25);
@@ -56,6 +57,7 @@
 						loader.setDRACOLoader(dracoLoader);
 						loader.load( 'd9NX3.glb', function ( gltf ) {
 //                             window.gltfd= gltf;
+                            $("#3d_branding")[0].style.top = 0;
                             $("#3d_placehldr")[0].style.display = 'none';
                             $("#3d_help")[0].innerHTML = "(Click and drag to rotate, right click and drag to move!)";
 							gltf.scene.traverse( function ( child ) {
@@ -90,7 +92,6 @@
                             },
 							function ( xhr ) {
                             var loadPct = Math.round(( xhr.loaded / xhr.total * 100 ));
-                            console.log("Loading NX3 Model: "+loadPct+"...");
                             $("#load_pct")[0].innerHTML = loadPct;
                             
         

@@ -1,16 +1,18 @@
 <!doctype html>
-{% load bootstrap4 %}
+{% load django_bootstrap5 %}
 
 <html lang="en">
 <head>
 {# Load CSS and JavaScript #}
 {% bootstrap_css %}
-{% bootstrap_javascript jquery='full' %}
+{% bootstrap_javascript  %}
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="delta9 Smart Growing Systems">
 <meta name="author" content="Viridian Scientific">
 <title>{%block Title%}Bootstrap · Base{%endblock%}</title>
+
+<script src="/static/js/jquery-3.6.0.min.js"></script>
 <script src="https://kit.fontawesome.com/7fa183e74a.js" crossorigin="anonymous"></script>
 <link href="/static/css/nucleo-icons.css" rel="stylesheet" />
 <link href="/static/css/material-kit.css" rel="stylesheet" />
@@ -31,8 +33,8 @@
 <meta name="theme-color" content="#563d7c">
 <link href="/static/css/cover.css" rel="stylesheet">
 </head>
-<!--   <body class="text-center"> -->
-<body class="text-center index-page"  data-spy="scroll" data-target=".navbar" data-offset="50">
+<body class="text-center index-page">
+<!-- <body class="text-center index-page"  data-spy="scroll" data-target=".navbar" data-offset="50"> -->
   {%include "bootstrap-navbar.html" %}
   {%block content%} This Body. {%endblock%}
    
