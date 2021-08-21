@@ -12,8 +12,12 @@
           <li class="dropdown nav-item">
            <a href="/spectrum" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" id="navbarHomeLink"><i class="fas fa-home"></i>Home</a>
            <ul class="dropdown-menu" aria-labelledby="navbarHomeLink">
+           {% if desktop_version  %}
             <li><a href="/#">d9NX3: The Growing Revolution (3D)</a></li>
             <li><a href="/2d">d9NX3: The Growing Revolution (2D)</a></li>
+            {% else %}
+            <li><a href="/#">d9NX3: The Growing Revolution</a></li>
+            {% endif %}
             <li><a href="/static/datasheets/d9-NX3-DS-web_rev1.pdf" target="_blank"> Download d9NX3 Datasheet</a></li>
             <li><a href="/blog" >Blog</a></li>
             <li><a href="/about">About us</a></li>
