@@ -58,11 +58,13 @@ def contact_submit(request):
     if request.POST["type"] == "sales":
         subject = "Website Sales Request"
         recipients = ['sales@del9.biz'];
+        message = message = "****WEBSITE SALES CONTACT ****\n"
     else:
         subject = "Website Contact Request"
         recipients = ['contact@del9.biz'];
+        message = "****WEBSITE CONTACT ****\n"
     sender = request.POST["name"]+" <"+request.POST["email"]+" >"
-    message = "****WEBSITE SALES CONTACT ****\n"+"CONTACT NAME: "+request.POST["name"]+"\nPRONOUNS: "+request.POST["pronouns"]+"\nEMAIL: "+request.POST["email"]+"\nPHONE:"+request.POST["phone"]+"\n********\nMESSAGE:\n\n"
+    message = message+"CONTACT NAME: "+request.POST["name"]+"\nPRONOUNS: "+request.POST["pronouns"]+"\nEMAIL: "+request.POST["email"]+"\nPHONE:"+request.POST["phone"]+"\n********\nMESSAGE:\n\n"
     message = message+request.POST["message"]+"\n*******"
     send_mail(subject, message, sender, recipients)
     if (request.META['HTTP_HOST'] == "m.del9.biz"):
