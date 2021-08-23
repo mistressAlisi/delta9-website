@@ -45,7 +45,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', end
     overflow-x: hidden;
 }
 .navbar-collapse.collapse.show {
-    left: 0px;
+    left: -40px;
 }
 .navbar .dropdown .dropdown-menu.show {
     display: block;
