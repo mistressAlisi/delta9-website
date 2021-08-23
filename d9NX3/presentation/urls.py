@@ -21,4 +21,8 @@ urlpatterns = [
     path('2d/',views.home_2d,name='home'),
     path('benefits/',views.benefits,name='benefits'),
     path('spectrum/',views.spectrum,name='spectrum'),
+    path('buy/',views.buy,name='buy'),
+    path('technology/smartpdu/',views.tech_smartpdu,name='tech_smartpdu'),
+    path('contact/',views.contact,name='contact'),
+    path('contact/submit/',views.contact_submit,name='contact_submit'),
 ]
