@@ -1,0 +1,37 @@
+<div class="card">
+                <div class="card-header card-header-text card-header-primary">
+                  <div class="card-text">
+                    <h4 class="card-title">Interactive Spectrum</h4>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <label for="loadProfile" class="form-label">Load Preset</label>
+                    <select class="form-select" aria-label="Default select example" id="loadProfile" onchange="load_preset();">
+                        <option selected="true" value="0">Custom</option>
+                        <option value="d">12H/16H (peak)</option>
+                        <option value="f">Flower Power (peak)</option>
+                        <option value="v">Veg Booster (peak)</option>
+                        <option value="6">66% Blue-Red, 33% Green</option>
+                        <option value="7">75% Blue-Red, 25% Green</option> 
+                        <option value="5">50% Blue, 50% Red</option>
+                        <option value="h">Harvest Mode</option> 
+                        <option value="b">Static Blue</option>
+                        <option value="g">Static Green</option> 
+                        <option value="r">Static Red</option> 
+                    </select>
+                  </label>
+                  <label for="blueRange" class="form-label">Deep Blue</label>
+                    <input type="range" class="form-range" min="0" max="30" step="0.1" id="blueRange" onChange="update_chart();">
+                  </label>
+                  <label for="redRange" class="form-label">Deep Red</label>
+                    <input type="range" class="form-range" min="0" max="30" step="0.1" id="redRange" onChange="update_chart();">
+                  </label>
+                   <label for="greenRange" class="form-label">Green</label>
+                    <input type="range" class="form-range" min="0" max="25" step="0.1" id="greenRange" onChange="update_chart();">
+                  </label>
+                  <label for="farRange" class="form-label">Far Red</label>
+                    <input type="range" class="form-range" min="0" max="4.2" step="0.1" id="farRange" onChange="update_chart();">
+                  </label>
+                </div>
+</div>
+

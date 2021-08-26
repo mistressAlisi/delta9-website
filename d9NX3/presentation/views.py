@@ -7,49 +7,66 @@ from django.views.decorators.csrf import csrf_protect
 
 def benefits(request):
     if (request.META['HTTP_HOST'] == "m.del9.biz"):
-        return render(request,"presentation-benefits.html",{'desktop_version':False})
+        context = {'desktop_version':False}
     else:
-        return render(request,"presentation-benefits.html",{'desktop_version':True})
+        context = {'desktop_version':True}
+    return render(request,"presentation-benefits.html",context)
 
 
 def spectrum(request):
     if (request.META['HTTP_HOST'] == "m.del9.biz"):
-        return render(request,"presentation-spectrum.html",{'desktop_version':False})
+        context = {'desktop_version':False}
     else:
-        return render(request,"presentation-spectrum.html",{'desktop_version':True})
+        context = {'desktop_version':True}
+    return render(request,"presentation-spectrum.html",context)
 
 
 
 def mobile(request):
-    return render(request,"presentation-index-mobi.html",{'desktop_version':False})
+    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+        context = {'desktop_version':False}
+    else:
+        context = {'desktop_version':True}
+    return render(request,"presentation-index-mobi.html",context)
 
 
 def home_2d(request):
-        return render(request,"presentation-index-2d.html",{'desktop_version':True})
+    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+        context = {'desktop_version':False}
+    else:
+        context = {'desktop_version':True}
+    return render(request,"presentation-index-2d.html",context)
 
 
 def home(request):
     if (request.META['HTTP_HOST'] == "m.del9.biz"):
-        return render(request,"presentation-index-mobi.html",{'desktop_version':False})
+        context = {'desktop_version':False}
     else:
-        return render(request,"presentation-index.html",{'desktop_version':True})
+        context = {'desktop_version':True}
+    return render(request,"presentation-index.html",context)
 
 
 def tech_smartpdu(request):
-    return render(request,"presentation-tech-smartpdu.html",{})
+    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+        context = {'desktop_version':False}
+    else:
+        context = {'desktop_version':True}
+    return render(request,"presentation-tech-smartpdu.html",context)
 
 
 def buy(request):
     if (request.META['HTTP_HOST'] == "m.del9.biz"):
-        return render(request,"presentation-buynow.html",{'desktop_version':False})
+        context = {'desktop_version':False}
     else:
-        return render(request,"presentation-buynow.html",{'desktop_version':True})
+        context = {'desktop_version':True}
+    return render(request,"presentation-buynow.html",context)
 
 def contact(request):
     if (request.META['HTTP_HOST'] == "m.del9.biz"):
-        return render(request,"presentation-contact.html",{'desktop_version':False})
+        context = {'desktop_version':False}
     else:
-        return render(request,"presentation-contact.html",{'desktop_version':True})
+        context = {'desktop_version':True}
+    return render(request,"presentation-contact.html",context)
 
 
 @csrf_protect
@@ -68,6 +85,16 @@ def contact_submit(request):
     message = message+request.POST["message"]+"\n*******"
     send_mail(subject, message, sender, recipients)
     if (request.META['HTTP_HOST'] == "m.del9.biz"):
-        return render(request,"presentation-contact-ok.html",{'desktop_version':False})
+        context = {'desktop_version':False}
     else:
-        return render(request,"presentation-contact-ok.html",{'desktop_version':True})
+        context = {'desktop_version':True}
+    return render(request,"presentation-contact-ok.html",context)
+
+
+
+def spectrum_explorer(request):
+    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+        context = {'desktop_version':False}
+    else:
+        context = {'desktop_version':True}
+    return render(request,"presentation-spectrum-explorer.html",context)

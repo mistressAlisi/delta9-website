@@ -1,0 +1,12 @@
+{%extends "bootstrap-base.html" %}
+
+{%block Title%}Delta9: Spectrum Explorer{%endblock%}
+{%block content %}
+<div class="wrapper" >
+{%include "presentation-spectrum-spectra.html" %}
+{%include "presentation-spectrum-controls.html" %}
+{%include "presentation-footer.html" %}
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js" integrity="sha512-b3xr4frvDIeyC3gqR1/iOi6T+m3pLlQyXNuvn5FiRrrKiMUJK3du2QqZbCywH6JxS5EOfW0DY0M6WwdXFbCBLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/static/js/presentation-spectrum.js"></script>
+{%endblock%}
