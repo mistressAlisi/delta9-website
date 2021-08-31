@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_protect
 
 
 def benefits(request):
-    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+    if (request.META['HTTP_HOST'] != "m.del9.biz"):
         context = {'desktop_version':False}
     else:
         context = {'desktop_version':True}
@@ -14,7 +14,7 @@ def benefits(request):
 
 
 def spectrum(request):
-    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+    if (request.META['HTTP_HOST'] != "m.del9.biz"):
         context = {'desktop_version':False}
     else:
         context = {'desktop_version':True}
@@ -23,7 +23,7 @@ def spectrum(request):
 
 
 def mobile(request):
-    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+    if (request.META['HTTP_HOST'] != "m.del9.biz"):
         context = {'desktop_version':False}
     else:
         context = {'desktop_version':True}
@@ -31,7 +31,7 @@ def mobile(request):
 
 
 def home_2d(request):
-    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+    if (request.META['HTTP_HOST'] != "m.del9.biz"):
         context = {'desktop_version':False}
     else:
         context = {'desktop_version':True}
@@ -39,7 +39,7 @@ def home_2d(request):
 
 
 def home(request):
-    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+    if (request.META['HTTP_HOST'] != "m.del9.biz"):
         context = {'desktop_version':False}
     else:
         context = {'desktop_version':True}
@@ -47,7 +47,7 @@ def home(request):
 
 
 def tech_smartpdu(request):
-    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+    if (request.META['HTTP_HOST'] != "m.del9.biz"):
         context = {'desktop_version':False}
     else:
         context = {'desktop_version':True}
@@ -55,14 +55,14 @@ def tech_smartpdu(request):
 
 
 def buy(request):
-    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+    if (request.META['HTTP_HOST'] != "m.del9.biz"):
         context = {'desktop_version':False}
     else:
         context = {'desktop_version':True}
     return render(request,"presentation-buynow.html",context)
 
 def contact(request):
-    if (request.META['HTTP_HOST'] == "m.del9.biz"):
+    if (request.META['HTTP_HOST'] != "m.del9.biz"):
         context = {'desktop_version':False}
     else:
         context = {'desktop_version':True}
