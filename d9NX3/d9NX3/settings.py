@@ -25,7 +25,7 @@ SECRET_KEY = 'i$%76rat*s@9ii3qs$h$gr7%cx6c9p%ttgh*txqeo5z3%u9n8('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','www.del9.biz','del9.biz','m.del9.biz','www.ardent.lighting','ardent.lighting']
+ALLOWED_HOSTS = ['localhost','www.del9.biz','del9.biz','m.del9.biz','www.ardent.lighting','ardent.lighting', 'www.delta9.ooo','delta9.ooo']
 
 
 # Application definition

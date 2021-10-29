@@ -3,6 +3,13 @@ from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_protect
 
 
+def demos(request):
+    if (request.META['HTTP_HOST'] != "m.del9.biz"):
+        context = {'desktop_version':False}
+    else:
+        context = {'desktop_version':True}
+    return render(request,"presentation-demos.html",context)
+
 
 
 def benefits(request):
@@ -46,12 +53,12 @@ def home(request):
     return render(request,"presentation-index.html",context)
 
 
-def tech_smartpdu(request):
+def tech(request):
     if (request.META['HTTP_HOST'] != "m.del9.biz"):
         context = {'desktop_version':False}
     else:
         context = {'desktop_version':True}
-    return render(request,"presentation-tech-smartpdu.html",context)
+    return render(request,"presentation-tech",context)
 
 
 def buy(request):

@@ -126,7 +126,10 @@ function update_chart() {
   
 };
 function setup_profiles() {
-    $.ajax("/static/csv/profiles.csv").done(function( data ){
+    $.ajax({
+    "url":"/static/csv/profiles.csv",
+    "crossDomain":true  
+    }).done(function( data ){
         var all_rows = data.split("\n");
         var count = 0;
         var cut_count = 0;
@@ -138,7 +141,10 @@ function setup_profiles() {
         draw_chart();
     });
 };
-$.ajax("/static/csv/spectrum.csv").done(function( data ){
+$.ajax({
+    "url":"/static/csv/spectrum.csv",
+    "crossDomain":true    
+    }).done(function( data ){
     var all_rows = data.split("\n");
     var count = 1;
     var cut_count = 0;
