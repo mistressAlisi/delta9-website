@@ -23,7 +23,8 @@ urlpatterns = [
     path('spectrum/',views.spectrum,name='spectrum'),
     path('spectrum/explorer/',views.spectrum_explorer,name='spectrum_explorer'),
     path('buy/',views.buy,name='buy'),
-    path('technology/smartpdu/',views.tech_smartpdu,name='tech_smartpdu'),
+    path('technology/',views.tech,name='tech'),
     path('contact/',views.contact,name='contact'),
     path('contact/submit/',views.contact_submit,name='contact_submit'),
+    path('demos/',views.demos,name='demos'),
 ]

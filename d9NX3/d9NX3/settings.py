@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_bootstrap5',
+    'captcha',
+    
     'bootstrap4',
     'storages',
     'presentation'
@@ -125,7 +127,7 @@ STATIC_URL = '/static/'
 
 AWS_ACCESS_KEY_ID = 'HNWJLZCF62IAI45CORYJ'
 AWS_SECRET_ACCESS_KEY = 'vFY9pTBpjk/tbBPhRllkNHrnx3E9FlaVj/ijH3exqFk'
-AWS_STORAGE_BUCKET_NAME = 'd9nx3webcdn'
+AWS_STORAGE_BUCKET_NAME = 'd9cdn'
 AWS_S3_ENDPOINT_URL = 'https://nyc3.digitaloceanspaces.com'
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
