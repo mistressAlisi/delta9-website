@@ -1,0 +1,4 @@
+env_x64/*
+.config
+*.pyc
+*.so
